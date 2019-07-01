@@ -12,6 +12,4 @@ const axiosInstance = axios.create({
 axiosInstance.defaults.params = {};
 axiosInstance.defaults.params['api_key'] = 'f5cad543ee3f010acc7b30d4d1f7c504';
 
-console.log(axiosInstance.defaults.params);
-
 export default axiosInstance;

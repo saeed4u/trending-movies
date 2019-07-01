@@ -23,7 +23,7 @@
 
 <script>
     import HelloWorld from './components/HelloWorld'
-    import {RepositoryFactory} from './repo/RepositoryFactory'
+    import {repositoryFactory} from './repo/repositoryFactory'
     export default {
         name: 'App',
         components: {
@@ -36,7 +36,14 @@
         },
         mounted(){
             console.log('mounted!!');
-            RepositoryFactory.get('trending').getTrendingMovies();
+            repositoryFactory.get('trending').getTrendingMovies().subscribe({
+                next: data => {
+                    console.log(data);
+                },
+                error: err => {
+
+                }
+            });
         }
     }
 </script>

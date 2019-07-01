@@ -1,10 +1,10 @@
 /**
  * Created by brasaeed on 21/06/2019.
  */
-import Repository from "./Repository";
+import Repository from "./repository";
 import {from, of} from "rxjs";
 import {mergeMap} from "rxjs/operators";
-import AppStorage from "./AppStorage";
+import AppStorage from "./appStorage";
 const endPoint = 'trending';
 
 const cacheKey = 'trending_movies_';
